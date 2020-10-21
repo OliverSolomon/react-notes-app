@@ -26,6 +26,7 @@ import UpdateCourse from './components/home/UpdateCourse';
 import axios from 'axios'
 import ErrorPage from './components/errors/404';
 import Support from './components/contribute/support';
+import Moderator from './components/user/Moderator';
 
 function App() {
     let [user,setUser]=useState({})
@@ -93,6 +94,7 @@ function App() {
              </div>
             {updatecourse && issignedin?<UpdateCourse />:null}
             <Switch>
+            <Route path='/moderator' exact component={Moderator}/>
               <Route path='/contribute' exact component={Contribute}/>
                <Route path='/support' exact component={Support}/>
                <Route path='/' exact component={Landing}/>
