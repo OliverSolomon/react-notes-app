@@ -38,3 +38,10 @@ h1,h2,h3,h4{
 .text-light{
 color:#fff;
 }
+@media screen and (max-width:600px){
+.landing-info{
+    top:30%;
+    width:100%;
+}
+
+  }

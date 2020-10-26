@@ -38,7 +38,6 @@ transition: all 0.3s ease-in-out;
     background:var(--card2-bg);
 }
 .card:hover{
-    transform: scale(1.1);
     cursor: pointer;
 }
 
