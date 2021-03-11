@@ -105,6 +105,29 @@
     word-wrap: break-word;
     /* word-break: break-all; */
 }
+.upload-item-change-name{
+    width:100%;
+    padding-top:10px;
+    font-size:16px;
+    border:none;
+    border-bottom: 2px solid rgb(34, 33, 33);
+    outline: none;
+
+}
+.to-upload-name-container{
+    position:relative;
+}
+/* .edit-button{
+    position:absolute;
+    right:0;
+    top:0;
+    color: white;
+
+} */
+.actions{
+    display:flex;
+    flex-wrap: nowrap;
+}
 
 .margins {
     margin: 10px

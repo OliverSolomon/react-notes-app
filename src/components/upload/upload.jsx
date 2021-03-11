@@ -153,7 +153,7 @@ function Upload () {
       let res = await serverupload()
       if (res.status === 200) {
         let data = res.data
-        //asigns a categoru to each uploaded file
+        //asigns a category to each uploaded file before sending to server for saving to database
         await files.forEach((file, index) => {
           data[index].category = file.category
         })
@@ -175,6 +175,10 @@ function Upload () {
     setSelected(el)
     setValue(el.code)
     setResults([])
+  }
+  const setFileName=(index,newName)=>{
+    files[index].name=newName
+    console.log('new file name set:',files[index])
   }
 
   return (
@@ -237,7 +241,7 @@ function Upload () {
             {files.map((file, index) => (
               <ToUploadItem
                 key={index}
-                state={{ files, index, handleDelete, file }}
+                state={{ files, index, handleDelete, file,disable ,setFileName}}
               />
             ))}
           </div>
